@@ -22,3 +22,8 @@ h1 {
 nav {
     background-color: white;
 }
+
+div.relative {
+    left: 30px;
+    right: 500px;
+}
