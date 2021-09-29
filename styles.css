@@ -17,13 +17,14 @@ a:link {
 
 h1 {
     background-color: forestgreen;
+    text-align: center;
 }
 
 nav {
     background-color: white;
 }
 
-div.relative {
-    left: 30px;
-    right: 500px;
+p {
+    width: 500px;
+    text-align: justify;
 }
