@@ -43,7 +43,12 @@
                 </div>
                 <script>
                 var name = window.prompt("Please tell me your name: ")
-                alert("Welcome, " + name + "!");
+                    while (name == 'null') {
+                        name = window.prompt("Please tell me your name: ")
+                    }
+                    if (name !== 'null') {
+                        alert("Welcome, " + name + "!");
+                    }
                 </script>
 
                 <p>To help in understanding OVA, here's a quick question: If you were to roll 6 d6 dice and get 5, 2, 1, 6, 5, and 3, what would your result be?</p>
@@ -64,6 +69,29 @@
                     }
                     </script>
                 </form>
+
+                <p>How many spooky jungles will you traipse through?</p>
+                
+                <form>
+                    <label for="question">How Many?</label>
+                    <input type="number" id="question" />
+                    <button type="button" onclick="secondFunction()">That Many?</button>
+                    <script>
+                        function secondFunction() {
+                        var sospook = document.getElementById("question").value,
+                        parent = document.getElementById('image'),
+                        imagePath = "images/jungle city ruin.jpg"
+                        img;
+
+                        for (let i = sospook; i > 1; i--) {
+                            img = new Image();
+                            img.src = imagePath;
+                            parent.appendChild(img);
+                        }
+                    }
+                    </script>
+                </form>
+                <div id="image" style="display:block;"></div>
             </main>
     </body>
 </html>
