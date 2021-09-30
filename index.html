@@ -25,6 +25,29 @@
 
                     <p>If you aren't sure if an idea works, or want help making something fit, or simply want to brainstorm, contact me via <a href="joel@somethingorother.com">email</a> or on <a href="https://discord.com/">Discord</a>. Make sure you are set up with a <a href="https://roll20.net/">Roll20</a> account at some point before game time. I will distribute a game link via Discord when it is set up.</p>
                 </div>
+                <script>
+                var name = window.prompt("Please tell me your name: ")
+                alert("Welcome, " + name + "!");
+                </script>
+
+                <p>To help in understanding OVA, here's a quick question: If you were to roll 6 d6 dice and get 5, 2, 1, 6, 5, and 3, what would your result be?</p>
+
+                <form>
+                    <label for="result">Result</label>
+                    <input type="number" id="result" />
+                    <p id="answer"></p>
+                    <button type="button" onclick="myFunction()">Check</button>
+                    <script>
+                    function myFunction() {
+                        var input = document.getElementById("result").value;
+                        if (input == 10) {
+                            document.getElementById("answer").innerHTML = "Correct!"
+                        } else {
+                            document.getElementById("answer").innerHTML = "Nope!"
+                        }
+                    }
+                    </script>
+                </form>
             </main>
     </body>
 </html>
