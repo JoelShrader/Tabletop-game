@@ -16,8 +16,24 @@
                     <li><a href="/Races">Races</a></li>
                 </ul>
             </nav>
-
+            
             <img src="images/fantasy village.jpg" alt="Welcome, Players" style="width:500px;">
+
+            <p id="greeting"></p>
+
+            <script>
+                const hour = new Date().getHours();
+                let hi;
+
+                if (hour < 16) {
+                    hi = "Greetings, traveler."
+                }
+                else {
+                    hi = "What a terrible night to have a curse."
+                }
+
+                document.getElementById("greeting").innerHTML = hi;
+            </script>
 
             <main>
                 <div>
